@@ -48,6 +48,8 @@ body {
 
     /* containing block for pseudo element */
     position: relative;
+
+    transition: background-color 90ms linear;
 }
 
 /* pseudo elements */
@@ -73,9 +75,35 @@ body {
     
 }
 
+.neon-button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--color-neon);
+    opacity: 0;
+    transition: opacity 90ms linear;
+    
+    background-color: var(--color-neon);
+    z-index: -1;
+}
+
 .neon-button:hover,
-neon-button:focus {
+.neon-button:focus {
     background: var(--color-neon);
     color: var(--color-bg);
     text-shadow: none;
 }
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+    opacity: 1;
+}
+
+.neon-button:hover::after,
+.neon-button:focus::after {
+    opacity: 1;
+}
+
