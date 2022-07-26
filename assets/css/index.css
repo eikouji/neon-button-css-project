@@ -1,13 +1,11 @@
-
-
 /* font-family: 'Chonburi', cursive;
 */
 
 
 
 :root {
-    --color-neon: hsl(51, 78%, 80%);
-    --color-bg: hsl(154, 7%, 19%);
+    --color-neon: hsl(0, 100%, 55%);
+    --color-bg: hsl(0, 100%, 5%);
 }
 
 *,
@@ -39,7 +37,7 @@ body {
     border-radius: 0.20em;
 
     text-shadow: 
-    0 0 0.18em hsl(0, 19%, 88%),
+    0 0 0.18em hsl(0, 100%, 80%),
     0 0 0.7em var(--color-neon);
 
     box-shadow:
